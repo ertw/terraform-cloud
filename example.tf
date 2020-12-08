@@ -19,7 +19,7 @@ resource "aws_sqs_queue" "terraform_queue" {
 }
 
 resource "aws_s3_bucket" "b" {
-  bucket = "terreform-serverless-example"
+  bucket = "terraform-serverless-example"
   acl    = "private"
 
   tags = {
