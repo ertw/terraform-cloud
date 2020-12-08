@@ -31,7 +31,7 @@ resource "aws_s3_bucket" "b" {
 resource "aws_s3_bucket_object" "file_upload" {
   bucket = "ertw-terraform-serverless-example"
   key    = "example.zip"
-  source = file("${path.module}/example.zip")
+  source = filebase64("${path.module}/example.zip")
   etag   = filemd5("${path.module}/example.zip")
 }
 
