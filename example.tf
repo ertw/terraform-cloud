@@ -20,6 +20,7 @@ resource "aws_sqs_queue" "terraform_queue" {
 
 resource "aws_s3_bucket" "b" {
   bucket = "ertw-terraform-serverless-example"
+  acl    = "public"
 
   tags = {
     Name        = "serverless example bucket"
