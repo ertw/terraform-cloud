@@ -20,7 +20,6 @@ resource "aws_sqs_queue" "terraform_queue" {
 
 resource "aws_s3_bucket" "b" {
   bucket = "ertw-terraform-serverless-example"
-  acl    = "private"
 
   tags = {
     Name        = "serverless example bucket"
@@ -39,7 +38,7 @@ resource "aws_s3_bucket_object" "file_upload" {
 #   function_name = "ServerlessExample"
 #
 #   # The bucket name as created earlier with "aws s3api create-bucket"
-#   s3_bucket = "terraform-serverless-example"
+#   s3_bucket = "ertw-terraform-serverless-example"
 #   s3_key    = "v1.0.0/example.zip"
 #
 #   # "main" is the filename within the zip file (main.js) and "handler"
