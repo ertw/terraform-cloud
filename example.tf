@@ -17,3 +17,13 @@ resource "aws_sqs_queue" "terraform_queue" {
   fifo_queue                  = true
   content_based_deduplication = true
 }
+
+resource "aws_s3_bucket" "b" {
+  bucket = "terreform-serverless-example"
+  acl    = "private"
+
+  tags = {
+    Name        = "serverless example bucket"
+    Environment = "Dev"
+  }
+}
